@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--ESTILO PESSOAL-->
+        <link rel="stylesheet" href="css\main.css">
+
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,700&display=swap" rel="stylesheet">
+
+        <!--ÍCONE DA PÁGINA-->
+        <title>Alô Tech!</title>
+        <link rel="shortcut icon" href="img\icon.png">
+
+        <style>
+            @media (max-width: 770px) {
+                input {
+                    width: 80% !important;
+                    text-align: center;
+                }
+            }
+
+            input {
+                width: 60% !important;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <!--Os elementos cuja estilização não estiver na página, estão identificados por ID no CSS externo: "main.css"-->
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-light navbar-light" id="navbar">
+            <!--Logo-->
+            <div class="nav-brand">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img\logo.png" alt="Logo" style="width: 60px;">
+                </a>
+                <a class="navbar-brand" href="index.html" style="font-family: 'KoHo', sans-serif;">
+                    <h3>Alô Tech!</h3>
+                </a>
+            </div>
+            <!--Links que colapasam em um menu quando em telas menores-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Outros códigos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="outros\calculadora-imc.html" target="_blank">Calculadora IMC</a>
+                            <a class="dropdown-item" href="outros\pet.html" target="_blank">Dicas pet</a>
+                            <a class="dropdown-item" href="outros\videos.html" target="_blank">Vídeos</a>
+                            <a class="dropdown-item" href="outros\arte.html" target="_blank">Arte</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://youtu.be/rxCs1fGxloI?t=5" target="_blank">Especial</a>
+                        </div>
+                    </li>
+                </ul>
+                <!--Botões de login-->
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-success my-2 my-sm-0 mr-1" type="button" href="login.html">Login</a>
+                    <a class="btn btn-danger my-2 my-sm-0" type="button" href="register.html">Registre-se!</a>
+                </form>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <center>
+                <form class="needs-validation" id="bloco-login" novalidate>
+                    <h2>Faça seu login!</h2>
+                    <div class="form-group">
+                        <label id="label" for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" name="email"
+                            required>
+                        <div class="valid-feedback">Ok!</div>
+                        <div class="invalid-feedback">Por favor preencha esse campo!</div>
+                    </div>
+                    <div class="form-group">
+                        <label id="label" for="pwd">Senha:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Sua senha" name="pswd" required>
+                        <div class="valid-feedback">Ok!</div>
+                        <div class="invalid-feedback">Por favor preencha esse campo!</div>
+                    </div>
+                    <button id="botão" type="submit" class="btn btn-outline-success" onClick="">Continuar</button>
+                </form>
+            </center>
+        </div>
+
+        <script>
+            // Bootstrap
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Get the forms we want to add validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+    </body>
+
+</html>

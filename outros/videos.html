@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+
+        <title>Vídeos!</title>
+
+        <style>
+            /*MODIFICAÇÕES RESPONSIVAS*/
+            @media (max-width:425px) {
+                header {
+                    width: 100% !important;
+
+                }
+            }
+
+            @media (max-width: 1220px) {
+                .tela {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column !important;
+                }
+
+                .video {
+                    display: flex;
+                    background-color: black;
+                    color: white;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
+
+                iframe {
+                    width: 300;
+                    height: 200;
+                }
+            }
+
+            /* ^FIM MODIFICAÇÕES RESPONSIVAS^ */
+
+            /*Tags*/
+            body {
+                background-color: #2e2b2b;
+            }
+
+            header {
+                padding: 1%;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 50px;
+                color: white;
+                background-color: #c4302b;
+
+            }
+
+            h1 {
+                font-family: "Noto Sans", sans-serif;
+            }
+
+            iframe {
+                border: none;
+                width: 400px;
+                height: 200px;
+            }
+
+            /*Classes*/
+            .tela {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-flow: row wrap;
+            }
+
+            .video {
+                display: flex;
+                background-color: #c4302b;
+                color: rgb(255, 255, 255);
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: column;
+                margin-bottom: 20px
+            }
+
+            .espaco {
+                border: 5px solid rgb(255, 255, 255);
+                width: 1%;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            <h1>Vídeos Úteis</h1>
+        </header>
+
+        <div class="tela">
+            <div class="linha">
+                <div class="video">
+                    <h3>Batalha de CSS</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-QgJgZCJvo4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="video">
+                    <h3>Extensões VS Code</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tmgpF7Bn3_E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h3>Abreviação Emmet</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8jLfTDn3_TM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="video">
+                    <h3>Dicas VS Code</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ODc-55gm_Mc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h3>Frameworks</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2zqzzTnfa0E"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h3>GitHub</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/myQuetgSEsY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="video">
+                    <h3>Site do Zero</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qPYCnebQQ6U"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h3>Flexbox</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9e-lWQdO-DA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h3>VS Code extensions</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/plEwInSiqgw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!--ESTILO PESSOAL-->
+        <link rel="stylesheet" href="css\main.css">
+
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,700&display=swap" rel="stylesheet">
+
+        <!--ÍCONE DA PÁGINA-->
+        <title>Alô Tech!</title>
+        <link rel="shortcut icon" href="img\icon.png">
+
+        <!--ESTILO ESPECÍFICO DESTA PÁGINA-->
+        <style>
+            @media (max-width:425px) {
+                .notas {
+                    width: 95%!important;
+                }
+            }
+
+
+            .sobre {
+                background-color: white;
+                width: 95%;
+                padding: 1%;
+                margin: 2%;
+                border-radius: 20px;
+
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .divisa {
+                border: 1px solid rgba(61, 56, 56, 0.459);
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .notas {
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            p {
+                text-align: justify;
+                text-indent: 1.5em;
+                margin: 0 5%;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light navbar-light" id="navbar">
+            <!--Logo-->
+            <div class="nav-brand">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img\logo.png" alt="Logo" style="width: 60px;">
+                </a>
+                <a class="navbar-brand" href="index.html" style="font-family: 'KoHo', sans-serif;">
+                    <h3>Alô Tech!</h3>
+                </a>
+            </div>
+            <!--Links que colapasam em um menu quando em telas menores-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Outros códigos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="outros\calculadora-imc.html" target="_blank">Calculadora IMC</a>
+                            <a class="dropdown-item" href="outros\pet.html" target="_blank">Dicas pet</a>
+                            <a class="dropdown-item" href="outros\videos.html" target="_blank">Vídeos</a>
+                            <a class="dropdown-item" href="outros\arte.html" target="_blank">Arte</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://youtu.be/rxCs1fGxloI?t=5" target="_blank">Especial</a>
+                        </div>
+                    </li>
+                </ul>
+                <!--Botões de login-->
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-success my-2 my-sm-0 mr-1" type="button" href="login.html">Login</a>
+                    <a class="btn btn-danger my-2 my-sm-0" type="button" href="register.html">Registre-se!</a>
+                </form>
+            </div>
+        </nav>
+
+        <div class="sobre">
+            <h2>Objetivo do site</h2>
+            <br>
+            <p> O site "Alô Tech!" foi a ideia que eu tive para compilar as habilidades que eu obtive até agora! Tudo o que
+                eu aprendi com as Meets, com a ALURA e com muuuitos vídeos na internet estão representados nesse
+                código em um formato de site de nóticias sobre tecnologia (a ideia inicial era fazer uma espécie de template
+                de blog!). </p>
+
+            <br>
+
+            <div class="divisa"></div>
+
+            <br>
+
+            <div class="notas">
+                <h2>Notas ao professor</h2>
+                <ul>
+                    <li>
+                        Na aba de "Outros códigos" consta outros códigos que eu já escrevi, pensei que seria uma ideia
+                        legal!
+                    </li>
+                </ul>
+                <ul>
+                    <ol>
+                        <li>
+                            Na produção do código, foquei mais no design. O JavaScript acabou ficando sem funcionalidade
+                            para atuar, por isso criei um canva para fazer alguma arte usando JavaScript. Presente na aba de "Outros
+                            códigos".
+                        </li>
+                        <br>
+                        <li>
+                            Os vídeos no código "vídeos" são vídeos que eu assisti e aprendi algo deles. O código em si
+                            apenas representa o uso de flexbox.
+                        </li>
+                    </ol>
+                </ul>
+                <ul>
+                    <li>
+                        Não consegui descobrir um meio decente com JS de criar um sistema de login, porém o design ficou bom
+                        e
+                        decidi manter sem funcionalidade.
+                    </li>
+                    <li>
+                        O código está documentado, indicando onde suas estilizações estão!
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>

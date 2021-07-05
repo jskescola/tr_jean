@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <!--Link fonte "Architects Daughter", para botão-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <!--Link fonte"Noto Sans JP", para *-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <title>Calculadora de IMC</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            text-align: center;
+            background-color: #e6f9ff;
+            color: black;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        input[type="button"] {
+            width: 80px;
+            height: 30px;
+            border-radius: 10px;
+            padding: 0;
+            background-color: #ff0000;
+            color: #ffffff;
+            font-family:'Architects Daughter', cursive;
+            font-size: 20px;
+        }
+        input {
+            padding: 6px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 1);
+            margin-bottom: 5px;
+            width: 200px;
+            height: 10px;
+            border-radius: 35px;
+        }
+        input[type="radio"] {
+            width: 20px;
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+        .info {
+            color:rgb(31, 15, 13);
+            font-size:20px;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .instrucao {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        //Início da declaração de funções//
+        function pulaLinha() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write("<center>" + frase + "</center>");
+            pulaLinha();
+        }
+        function exibeResultado() {
+            var nome = document.imcForm.nome.value;
+            var dataNasc = document.imcForm.dataNasc.value;
+            var email = document.imcForm.email.value;
+            var telefone = document.imcForm.telefone.value;
+            var calculo = (peso / (altura * altura)).toFixed(2);
+            var sexo = document.imcForm.sexo.value;
+            var altura = document.imcForm.altura.value;
+            var peso = document.imcForm.peso.value;
+            var calculo = (peso / (altura * altura)).toFixed(2);
+
+            mostra("<b>Nome do usuário: </b>" + nome);
+            mostra("<b>Sexo do usuário: </b>" + sexo);
+            mostra("<b>Altura do usuário: </b>" + altura);
+            mostra("<b>Peso do usuário: </b>" + peso);
+            mostra("<b>Data de nascimento: </b>" + dataNasc);
+            mostra("<b>Email: </b>" + email);
+            mostra("<b>Telefone: </b>" + telefone);
+            mostra("<br><b>RESULTADO (IMC): " + calculo + "</b>");
+        }
+        function calculoImc() {
+            var altura = document.imcForm.altura.value;
+            var peso = document.imcForm.peso.value;
+            var calculo = (peso / (altura * altura)).toFixed(2);
+
+            if (calculo < 18.5) {
+                alert("Você está abaixo do peso com esse indice: " + calculo);
+                exibeResultado();
+            }
+            if (calculo >= 18.5 && calculo < 24.99) {
+                alert("Você está normal com esse indice: " + calculo);
+                exibeResultado();
+            }
+            if (calculo >= 25 && calculo < 29.9) {
+                alert("Você está com sobrepeso com esse indice: " + calculo);
+                exibeResultado();
+            }
+            if (calculo >= 30 && calculo < 39.9) {
+                alert("Você está com obesidade com esse indice: " + calculo);
+                exibeResultado();
+            }
+            if (calculo > 40) {
+                alert("Você está com obesidade grave com esse indice: " + calculo);
+                exibeResultado();
+            }
+        }
+		//Fim das funções//
+    </script>
+    <!--Inserindo a imagem head-->
+    <center><img src="https://i.ibb.co/fNdcg1K/imc.png" class="cover" width="100%"></center> <br>
+    <!--Introduzindo IMC-->
+    <article>
+        <p class="info">IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial
+        de Saúde para calcular o peso ideal de cada pessoa. 
+        </p> <br>
+        <p class="instrucao"><b>Quer descobrir o seu IMC? Complete as informações abaixo!</b>
+        </p> <br>
+    </article>
+    <!--Iniciando o formulário-->
+    <form name="imcForm" id="imcForm">
+        <p><b>Nome</b></p>
+        <input type="text" name="nome" id="nome" placeholder="Ex.: João da Silva"> <br>
+
+        <p><b>Altura</b></p>
+        <input type="text" name="altura" id="altura" placeholder="Ex.: 1.60"> <br>
+
+        <p><b>Peso</b></p>
+        <input type="number" name="peso" id="peso" placeholder="Ex.: 60"> <br>
+
+        <p><b>Data de Nascimento</b></p>
+        <input type="date" name="dataNasc" id="dataNasc"> <br>
+
+        <p><b>E-mail</b></p>
+        <input type="email" name="email" id="email" placeholder="Ex.: email@mail.com"> <br>
+
+        <p><b>Telefone</b></p>
+        <input type="tel" name="telefone" id="tele" placeholder="Seu telefone com DDD:"> <br><br>
+            <!--Gênero-->
+            <p>
+                <label>
+                    <input type="radio" name="sexo" value="Masculino" id="sexo_0">
+                    Masculino
+                </label>  <br>
+                <label>
+                    <input type="radio" name="sexo" value="Feminino" id="sexo_1">
+                    Feminino
+                </label>  <br>
+                <label>
+                    <input type="radio" name="sexo" value="Outro" id="sexo_alt">
+                    Outro
+                </label>
+            </p> <br>
+        <input type="button" name="eniar" value="Enviar" onclick="calculoImc()">
+    <!--Fim do Formulario-->
+    </form>
+
+</body>
+</html>

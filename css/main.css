@@ -1,0 +1,32 @@
+/*Aqui consta o estilo padrão*/
+/*Com excessão à estilização do body, tudo se refere às páginas de login e registro*/
+
+/* MODIFICAÇÕES RESPONSIVAS */
+@media (max-width: 770px) {
+    #bloco-login {
+        width: 100% !important;
+        padding: 5% !important;
+    }
+}
+/* ^FIM DAS MODIFICAÇÕES RESPONSIVAS^*/
+
+/*Estlização por tags*/
+body {
+    background: -webkit-linear-gradient(bottom, rgb(230, 206, 206), rgb(40, 113, 240)) fixed;
+    background: -moz-linear-gradient(bottom, rgb(230, 206, 206), rgb(40, 113, 240)) fixed;
+    background: -o-linear-gradient(bottom, rgb(230, 206, 206), rgb(40, 113, 240)) fixed;
+}
+/*Estilização por IDs*/
+
+#bloco-login {
+    display: block;
+    margin: 10% 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 2%;
+    width: 50%;
+    border-radius: 20px;
+}
+#label {
+    font-size: 20px;
+}

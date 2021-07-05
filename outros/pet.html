@@ -1,0 +1,239 @@
+<!--NOTA: OS COMENTÁRIOS SEMPRE SE REFEREM AO CONTEÚDO DIRETAMENTE ABAIXO DELES-->
+
+<!DOCTYPE html>
+<!--O atributo "lang" define a linguagem. -->
+<html lang="pt">
+
+<head>
+    <!--O atributo "charset" da tag "meta" serve para decodificar alguns caracteres sem suporte do navegador-->
+    <meta charset="UTF-8">
+    <!--Link de configuração para acessar a api do Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!--Link para referenciar a fonte Fira Sans Condensed-->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100&display=swap" rel="stylesheet">
+    <!--Link para referenciar a fonte Goblin One-->
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+    <!--Link para referenciar a fonte Amatic SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <!--Link para referenciar a fonte Source Sans Pro-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <!--Link para referenciar a fonte Architects Daughter-->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+    <!--A tag "title" define o titulo do site quando exibido no navegador-->
+    <title>Pet</title>
+</head>
+
+<style>
+    body {
+        /*define cor de fundo*/
+        background-color: #11319B;
+    }
+
+    .titulo {
+        /*cor da fonte*/
+        color: #E57000;
+        /*Estilo da fonte*/
+        font-family: 'Fira Sans Condensed', sans-serif;
+        /*tamanho da fonte*/
+        font-size: 1.5em;
+        /*alinhamente do titulo*/
+        text-align: center;
+    }
+
+    p {
+        /*Negrito em todos os parágrafos*/
+        font-weight: bold;
+    }
+
+    .conteudo {
+        /*cor da fonte*/
+        color: #e26e02e5;
+        /*Transforma o elemento em um bloco, possibilitando que seja alterada a posição*/
+        display: block;
+        /*Manipula a margem do elemento, podendo mudar a posição do item verticalmente ou horizontalmente*/
+        margin: 0 100px 0px 100px;
+        /*Estilo da fonte*/
+        font-family: 'Fira Sans Condensed', sans-serif;
+        /*tamanho da fonte*/
+        font-size: 1.5em;
+        /*alinhamento do paragrafo*/
+        text-align: justify;
+        /*cria uma "margem" para o paragrafo*/
+        text-indent: 1em;
+    }
+
+    .lista-ol {
+        /*cor da fonte*/
+        color: #51FFFF;
+        /*Transforma o elemento em um bloco, possibilitando que seja alterada a posição*/
+        display: block;
+        /*Estilo da fonte*/
+        font-family: 'Goblin One', cursive;
+        /*Determina a distância entre as linhas*/
+        line-height: 1.5em;
+        /*Manipula a margem do elemento, podendo mudar a posição do item verticalmente ou horizontalmente*/
+        margin: 0 100px 0 100px;
+    }
+
+    .conteudo2 {
+        /*cor da fonte*/
+        color: #e26e02e5;
+        /*Transforma o elemento em um bloco, possibilitando que seja alterada a posição*/
+        display: block;
+        /*Manipula a margem do elemento, podendo mudar a posição do item verticalmente ou horizontalmente*/
+        margin: 0 200px 0px 150px;
+        /*Estilo da fonte*/
+        font-family: 'Fira Sans Condensed', sans-serif;
+        /*tamanho da fonte*/
+        font-size: 1.3em;
+        /*posição do paragrafo*/
+        text-align: justify;
+    }
+
+    .lista-ul {
+        color: #ACDB00;
+        /*Transforma o elemento em um bloco, possibilitando que seja alterada a posição*/
+        display: block;
+        /*Estilo da fonte*/
+        font-family: 'Amatic SC', cursive;
+        /*tamanho da fonte*/
+        font-size: 1.6em;
+        /*Negrito*/
+        font-weight: bold;
+        /*Manipula a margem do elemento, podendo mudar a posição do item verticalmente ou horizontalmente*/
+        margin: 0 150px 0 150px;
+    }
+
+    .legenda1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        color: white;
+    }
+
+    .legenda2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+        color: white;
+    }
+
+    .dog {
+        /*Transforma o elemento em um bloco, possibilitando que seja alterada a posição*/
+        display: block;
+        /*Manipula a margem do elemento, podendo mudar a posição do item verticalmente ou horizontalmente*/
+        margin: 0 auto;
+        /*Largura*/
+        width: 50%;
+        /*Altura*/
+        height: 50%;
+    }
+
+    .cat {
+        /*Transforma o elemento em um bloco, possibilitando que seja alterada a posição*/
+        display: block;
+        /*Manipula a margem do elemento, podendo mudar a posição do item verticalmente ou horizontalmente*/
+        margin: 0 auto;
+        /*Largura*/
+        width: 25%;
+        /*Altura*/
+        height: 25%;
+    }
+
+    .feedback {
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-align: center;
+    }
+
+    /*Para melhor manipular a posição de ambos botões na página*/
+    .blocoBotoes {
+        display: inline;
+        margin: 0 600px 0 600px;
+    }
+
+    input {
+        background-color: #48f7ae;
+        /*Arredonda o layot do botão*/
+        border-radius: 10px;
+        font-family: 'Architects Daughter', cursive;
+        font-size: 18px;
+        /*Negrito*/
+        font-weight: bold;
+        /*distância entre bordas e texto do botão*/
+        padding: 5px;
+        width: 60px;
+    }
+</style>
+
+<body>
+    <div class="titulo">
+        <h1>Cuidados com o seu pet!</h1>
+    </div>
+
+    <div class="conteudo">
+        <p>Antes de adotar ou mesmo comprar um animal de estimação, é preciso ter em mente que os cuidados
+            necessários para oferecer uma vida de qualidade aos bichinhos vão muito além do que providenciar água,
+            comida e um teto.
+            <br>
+            Você sabe os cuidados mais importantes que você deve ter com o seu animalzinho? Aqui vai uma breve
+            lista para te ajudar a
+            <!--A tag "u" sublinha uma parte do texto--><u>priorizar</u> os cuidados!
+        </p>
+    </div>
+
+    <div class="lista-ol">
+        <!--Lista ordenada para demonstrar prioridade-->
+        <ol>
+            <li>Vacinação;</li>
+            <li>Castração;</li>
+            <li>Controle de parasitas;</li>
+            <li>Higiene bucal,</li>
+            <li>Banhos e escovação.</li>
+        </ol>
+    </div>
+    <br>
+    <div class="conteudo2">
+        <p>Além dos itens acima, há cuidados
+            <!--A tag "u" sublinha uma parte do texto--> <u>constantes</u> que seu animalzinho vai adorar receber!
+        </p>
+    </div>
+
+    <div class="lista-ul">
+        <!--A lista desordenada para demonstrar cuidados igualmente importantes-->
+        <ul>
+            <li>Alimentação de qualidade</li>
+            <li>Passeios e brincadeiras</li>
+            <li>Visitas ao veterinário</li>
+        </ul>
+    </div>
+
+    <!--Imagem de um cachorro-->
+    <div class="img1">
+        <h2 class="legenda1">Cachorro</h2>
+        <img src="https://i.ibb.co/r39jrD4/cachorro.png" alt="cachorro" class="dog">
+    </div>
+
+    <!--Imagem de um gato-->
+    <div class="img2">
+        <h2 class="legenda2">
+            <!--a tag "span" age como uma divisão no texto para aplicar um atributo CSS em uma parte especifica do texto (nesse caso, colorindo de amarelo o "GA")-->
+            <span style="color: #ffff00">Ga</span>to
+        </h2>
+        <img src="https://i.ibb.co/LZCqC9m/gato.png" alt="gato" class="cat">
+    </div>
+    <br><br>
+
+    <!--Pedido de feedback-->
+    <div class="feedback">
+        <h2>Essa página foi útil para você?</h2>
+    </div>
+
+    <!--Botões para responder ao pedido-->
+    <div class="blocoBotoes">
+        <input type="button" name="sim" value="Sim" onClick="alert('Obrigado pelo seu feedback!')";>
+        <input type="button" name="não" value="Não" onClick="alert('Obrigado pelo seu feedback!')";>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+    <!DOCTYPE html>
+    <html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arte</title>
+
+        <style>
+            body {
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(40, 40, 40);
+            }
+
+            canvas {
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas width="1200" height="610"></canvas>
+
+        <script>
+            var tela = document.querySelector('canvas');
+            var pincel = tela.getContext('2d');
+
+            var gradient = pincel.createLinearGradient(300, 300, 600, 610);
+            gradient.addColorStop("0", "magenta");
+            gradient.addColorStop("0.2", "blue");
+            gradient.addColorStop("0.4", "purple");
+            gradient.addColorStop("0.6", "red");
+            gradient.addColorStop("0.8", "green");
+            gradient.addColorStop("1.0", "yellow");
+
+            //Plano de Fundo
+            pincel.fillStyle = 'pink';
+            pincel.fillRect(0, 0, 1200, 610);
+
+            //Rosto
+            pincel.fillStyle = gradient;
+            pincel.beginPath();
+            pincel.arc(600, 305, 250, 0, 2 * 3.14)
+            pincel.fill();
+
+            //Olhos
+            pincel.fillStyle = 'white';
+            pincel.beginPath();
+            pincel.arc(580, 200, 30, 0, 2 * 3.14);
+            pincel.fill();
+
+            pincel.fillStyle = 'white';
+            pincel.beginPath();
+            pincel.arc(780, 200, 30, 0, 2 * 3.14);
+            pincel.fill();
+
+            //Boca
+            pincel.fillStyle = 'black';
+            pincel.beginPath();
+            pincel.arc(700, 320, 80, 0, 2 * 3.14);
+            pincel.fill();
+        </script>
+    </body>
+
+</html>
